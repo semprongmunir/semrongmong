@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="View the featured video and its details.">
+<meta name="theme-color" content="#171717">
+<title>Featured Video</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px;background:#f3f4f6;color:#202124;font-family:Arial,Helvetica,sans-serif}
+.card{width:100%;max-width:640px;background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:20px;box-shadow:0 8px 28px #0000000d;text-align:center}
+h1{font-size:clamp(24px,5vw,34px);line-height:1.2;margin:4px 0 10px}
+.desc{font-size:15px;line-height:1.6;color:#5f6368;margin:0 auto 20px;max-width:460px}
+.preview{display:block;position:relative;overflow:hidden;border-radius:12px;background:#e5e7eb;aspect-ratio:16/9}
+.preview img{width:100%;height:100%;object-fit:cover;display:block}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:50%;background:#e62129;border:2px solid white;box-shadow:0 3px 12px #0004;display:grid;place-items:center}
+.play:after{content:"";margin-left:5px;border-top:12px solid transparent;border-bottom:12px solid transparent;border-left:19px solid white}
+.caption{font-size:17px;line-height:1.5;margin:20px 0 16px}
+.cta{display:flex;align-items:center;justify-content:center;gap:11px;width:100%;min-height:60px;padding:15px 18px;background:linear-gradient(#ed343b,#c91d25);color:#fff;border:1px solid #b71920;border-radius:10px;text-decoration:none;font-size:18px;font-weight:800;box-shadow:0 4px 0 #94151b;transition:transform .15s,box-shadow .15s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 6px 0 #94151b}
+.cta:active{transform:translateY(2px);box-shadow:0 1px 0 #94151b}
+.cta:focus-visible,.preview:focus-visible{outline:3px solid #1769e0;outline-offset:4px}
+.play-small{width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:13px solid #fff}
+.note{font-size:12px;line-height:1.6;color:#6b7280;margin-top:18px}
+@media(max-width:480px){.card{padding:15px}.play{width:56px;height:56px}.play:after{border-top-width:10px;border-bottom-width:10px;border-left-width:16px}.cta{font-size:16px}}
+</style>
+</head>
+<body>
+<main class="card">
+  <h1>Featured Video</h1>
+  <p class="desc">Watch the video below. The button opens the same destination as the preview.</p>
+  <a class="preview" href="https://t.co/WOxEomvGJA" aria-label="Open featured video">
+    <img src="https://cdn.aceimg.com/ei9lMnzlx.jpg" alt="Preview of the featured video">
+    <span class="play" aria-hidden="true"></span>
+  </a>
+  <p class="caption">Open the video to view its content.</p>
+  <a class="cta" href="https://t.co/WOxEomvGJA" target="_blank" rel="noopener noreferrer">
+    <span class="play-small" aria-hidden="true"></span>
+    <span>WATCH VIDEO</span>
+    <span aria-hidden="true">→</span>
+  </a>
+  <p class="note">Use an accurate thumbnail and a destination that matches the content. Only share material you have permission to publish.</p>
+</main>
+</body>
+</html>
